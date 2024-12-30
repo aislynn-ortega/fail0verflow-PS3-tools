@@ -12,7 +12,7 @@
 #include <string.h>
 #include <stdarg.h>
 #include <stdlib.h>
-#include <zlib.h>
+#include "zlib.h"
 #include <dirent.h>
 
 #include "tools.h"

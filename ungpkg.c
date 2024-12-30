@@ -90,7 +90,7 @@ static void unpack_pkg(void)
 
 		flags &= 0xff;
 		if (flags == 4)
-			mkdir(fname, 0777);
+			mkdir(fname);
 		else if (flags == 1 || flags == 3)
 			memcpy_to_file(fname, pkg + file_offset, size);
 		else
@@ -116,7 +116,7 @@ int main(int argc, char *argv[])
 		dir = argv[2];
 	}
 
-	mkdir(dir, 0777);
+	mkdir(dir);
 
 	if (chdir(dir) != 0)
 		fail("chdir(%s)", dir);

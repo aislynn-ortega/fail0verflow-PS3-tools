@@ -13,7 +13,7 @@ static u8 *nor = NULL;
 
 static void new_dir(const char *n)
 {
-	mkdir(n, 0777);
+	mkdir(n);
 
 	if (chdir(n) < 0)
 		fail("chdir");

@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 
 	pkg = mmap_file(argv[1]);
 
-	mkdir(argv[2], 0777);
+	mkdir(argv[2]);
 
 	if (chdir(argv[2]) != 0)
 		fail("chdir");
